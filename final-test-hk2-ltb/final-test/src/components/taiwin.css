@@ -1,0 +1,269 @@
+.tab-button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    /* Xóa viền của button */
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    /* Để sử dụng pseudo-element */
+    background-color: white;
+}
+
+.tab-button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    /* Chiều cao của viền dưới */
+    background-color: transparent;
+    /* Màu mặc định của viền dưới */
+    transition: background-color 0.3s ease;
+    /* Hiệu ứng chuyển đổi màu */
+}
+
+.tab-button:hover::after {
+    background-color: #2b6cb0;
+    /* Màu của viền dưới khi hover */
+}
+
+.tab-button.active::after {
+    background-color: #2b6cb0;
+    /* Màu của viền dưới khi active */
+    transform: scaleX(1.1);
+    /* Tăng độ rộng của viền dưới khi active */
+}
+
+
+.task-input {
+    border: 1px solid #cbd5e0;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+}
+
+.add-button {
+    background-color: #2b6cb0;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
+.add-button:hover {
+    background-color: #4299e1;
+}
+
+.task-list {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.task-item {
+    margin-bottom: 0.5rem;
+    list-style-type: none;
+}
+
+.task-item.completed {
+    text-decoration: line-through;
+    color: #a0aec0;
+}
+
+.clear-completed {
+    background-color: #e53e3e;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.clear-completed:hover {
+    background-color: #f56565;
+}
+
+.task-list {
+    text-align: left;
+    /* Căn nội dung văn bản sang trái */
+    max-width: 800px;
+    /* Giới hạn chiều rộng của nội dung */
+    margin: 0 auto;
+    /* Căn giữa nội dung */
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    /* Căn dòng chữ theo chiều dọc */
+    padding: 0.75rem;
+    border-bottom: 1px solid #cbd5e0;
+    /* Đường kẻ dưới mỗi item */
+}
+
+.task-item:last-child {
+    border-bottom: none;
+    /* Xóa đường kẻ dưới của item cuối cùng */
+}
+
+.task-item input[type="checkbox"] {
+    margin-right: 1rem;
+    /* Khoảng cách với nội dung text */
+}
+
+.task-item.completed {
+    text-decoration: line-through;
+    /* Gạch ngang văn bản khi completed */
+    color: #a0aec0;
+    /* Màu văn bản xám khi completed */
+}
+
+.clear-completed {
+    background-color: #f56565;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.clear-completed:hover {
+    background-color: #e53e3e;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: space-between;
+    /* Các nút sẽ căng ra để đẹp */
+    width: 100%;
+    max-width: 800px;
+    /* Giới hạn chiều rộng của các nút */
+    margin-top: 1rem;
+    /* Khoảng cách phía trên */
+}
+
+.tab-button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    /* Xóa viền của button */
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    /* Để sử dụng pseudo-element */
+}
+
+.tab-button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    /* Chiều cao của viền dưới */
+    background-color: transparent;
+    /* Màu mặc định của viền dưới */
+    transition: background-color 0.3s ease;
+    /* Hiệu ứng chuyển đổi màu */
+}
+
+.tab-button:hover::after {
+    background-color: #2b6cb0;
+    /* Màu của viền dưới khi hover */
+}
+
+.tab-button.active::after {
+    background-color: #2b6cb0;
+    /* Màu của viền dưới khi active */
+    transform: scaleX(1.1);
+    /* Tăng độ rộng của viền dưới khi active */
+}
+
+.task-input {
+    width: 300px;
+    /* Điều chỉnh chiều rộng của input */
+    padding: 0.5rem;
+    /* Thêm padding cho input */
+    font-size: 1rem;
+    border: 1px solid #e2e8f0;
+    /* Đổi viền của input */
+    border-radius: 0.25rem;
+    /* Đổi góc bo của input */
+    margin-right: 1rem;
+    /* Khoảng cách với button Add */
+}
+
+.add-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #2b6cb0;
+    color: #ffffff;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+    background-color: #2c5282;
+}
+
+.task-list {
+    max-width: 800px;
+    margin-top: 2rem;
+    text-align: left;
+    /* Căn nội dung sang trái */
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+    background-color: #edf2f7;
+    width: 100%;
+    /* Đảm bảo rộng hết phần được căn trái */
+}
+
+.task-item.completed {
+    background-color: #cbd5e0;
+    text-decoration: line-through;
+}
+
+.task-item input {
+    margin-right: 1rem;
+}
+
+.clear-completed {
+    padding: 0.5rem 1rem;
+    background-color: #e53e3e;
+    color: #ffffff;
+    border: none;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.clear-completed:hover {
+    background-color: #c53030;
+}
+.tabber{
+    text-align: center;
+}
